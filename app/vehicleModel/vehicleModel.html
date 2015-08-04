@@ -1,5 +1,2 @@
-<p>This is the partial for vehicleModel.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+
+<div ng-repeat="car in cars.types">{{car.model}}<img ng-src="resources/img/{{car.imageName}}.jpg"/></div>

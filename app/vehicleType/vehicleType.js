@@ -4,6 +4,7 @@
 (function(){ 
 	var module = angular.module('myApp.vehicleType', [])
 
+<<<<<<< HEAD
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/vehicleType', {
 			templateUrl: 'vehicleType/vehicleType.html',
@@ -35,3 +36,11 @@
 	}]);
 
 }());
+=======
+.controller('VehicleTypeCtrl', ['$scope', 'carService', '$location', function($scope, carService, $location) {
+      $scope.cars = carService.getCars();
+      $scope.go = function ( path ) {
+        $location.path( path );
+      };
+}]);
+>>>>>>> 56b344125b97d80c1e400fd4d444aa77ad6ae802

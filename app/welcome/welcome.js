@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.welcome', ['ngRoute'])
+angular.module('myApp.welcome', ['myApp.services'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/welcome', {
@@ -9,6 +9,8 @@ angular.module('myApp.welcome', ['ngRoute'])
   });
 }])
 
-.controller('WelcomeCtrl', [function() {
-
+.controller('WelcomeCtrl', ['$scope', '$location', function($scope, $location) {
+    $scope.go = function ( path ) {
+        $location.path( path );
+    };
 }]);
