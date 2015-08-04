@@ -9,6 +9,9 @@ angular.module('myApp.vehicleType', [])
   });
 }])
 
-.controller('VehicleTypeCtrl', [function() {
-
+.controller('VehicleTypeCtrl', ['$scope', 'carService', '$location', function($scope, carService, $location) {
+      $scope.cars = carService.getCars();
+      $scope.go = function ( path ) {
+        $location.path( path );
+      };
 }]);
