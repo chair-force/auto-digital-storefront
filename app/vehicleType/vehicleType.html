@@ -4,27 +4,42 @@
 </div>
 
 
-<div class="car-container">
-    <div class = "car-container col-lg-5 ">
-        <img src= "img/coupe_img.jpg" alt="Coupe" id="coupe" style="width:400px;height:300px;">
-    </div>
+<div class = "car-container col-lg-5 ">
+    <div ng-controller="sedanController">
+      <div style="height: 300px">
+        <carousel interval="myInterval" no-wrap="noWrapSlides">
+          <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4>Coupe</h4>
+          </div>
+      </slide>
+  </carousel>
+</div>
+</div> <!--slideShow-->
+</div> <!--carContainer-->
 
-    <div class = "car-container col-lg-5">
-        <img src= "img/sedan_img.jpg" alt="Coupe" style="width:400px;height:300px;">
-    </div>
+
+<div class = "car-container col-lg-5">
+    <img src= "img/sedan_img.jpg" alt="Coupe">
 </div>
 
-<div class="car-container">
 
-    <div class = "car-container col-lg-5">
-        <img src= "img/coupe_img.jpg" alt="Coupe" style="width:400px;height:300px;">
-    </div>
-
-    <div class = "car-container col-lg-5">
-        <img src= "img/sedan_img.jpg" alt="Coupe" style="width:400px;height:300px;">
-    </div>
+<div class = "car-container col-lg-5">
+    <img src= "img/sedan_img.jpg" alt="Coupe">
 </div>
+
+
+<div class = "car-container col-lg-5">
+
+    <img src= "img/coupe_img.jpg" alt="Coupe">
+</div>
+
+<div class = "car-container col-lg-5">
+    <img src= "img/sedan_img.jpg" alt="Coupe">
+</div>
+
+
 
 <!--Scripts-->
 
-</body>
