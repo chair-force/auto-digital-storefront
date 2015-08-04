@@ -28,3 +28,14 @@
   content: "";
   padding: 0;
 }
+@font-face {
+  font-family: AudiNormal;
+  src: url(resources/fonts/AudiTypeV03-Normal.otf);
+}
+
+#main {
+  font-family: AudiNormal;
+}
+div{
+  font-family: AudiNormal;
+}

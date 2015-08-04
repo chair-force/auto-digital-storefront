@@ -1,0 +1,13 @@
+.carousel-caption h1{
+	color: black;
+}
+
+.carousel-caption {
+	overflow: hidden;
+	padding-top: 30px;
+}
+
+.typeLabel h3{
+	font-family: AudiNormal;
+	text-align: center
+}

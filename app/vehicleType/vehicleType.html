@@ -1,49 +1,80 @@
+<link rel="stylesheet" href="vehicleType/vehicleType.css">
 
-<<<<<<< HEAD
 <div class="page-header">
     <h1>Header <small>Hello</small></h1>
 </div>
 
 
 <div class = "car-container col-lg-5 ">
-    <div ng-controller="sedanController">
-      <div style="height: 300px">
+    <div ng-controller="coupeController">
+      <div style="height: 250px">
+        <carousel interval="myInterval" no-wrap="noWrapSlides">
+          <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+        </slide>
+    </carousel>
+    <div class="typeLabel"><h3>Coupe</h3></div>
+
+</div> <!--slideShow-->
+</div> <!--coupeContainer-->
+</div>
+
+<div class = "car-container col-lg-5">
+    <div ng-controller="suvController">
+      <div style="height: 250px">
         <carousel interval="myInterval" no-wrap="noWrapSlides">
           <slide ng-repeat="slide in slides" active="slide.active">
             <img ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
-              <h4>Coupe</h4>
+              <h4></h4>
           </div>
       </slide>
   </carousel>
+      <div class="typeLabel"><h3>SUV</h3></div>
+
 </div>
 </div> <!--slideShow-->
-</div> <!--carContainer-->
-
-
-<div class = "car-container col-lg-5">
-    <img src= "img/sedan_img.jpg" alt="Coupe">
 </div>
 
 
 <div class = "car-container col-lg-5">
-    <img src= "img/sedan_img.jpg" alt="Coupe">
+    <div ng-controller="sedanController">
+      <div style="height: 250px">
+        <carousel interval="myInterval" no-wrap="noWrapSlides">
+          <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4></h4>
+          </div>
+      </slide>
+  </carousel>
+      <div class="typeLabel"><h3>Sedan</h3></div>
+
+</div>
+</div> <!--slideShow-->
 </div>
 
 
 <div class = "car-container col-lg-5">
+    <div ng-controller="convertibleController">
+      <div style="height: 250px">
+        <carousel interval="myInterval" no-wrap="noWrapSlides">
+          <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4></h4>
+          </div>
+      </slide>
+  </carousel>
+      <div class="typeLabel"><h3>Convertible</h3></div>
 
-    <img src= "img/coupe_img.jpg" alt="Coupe">
+</div>
+</div> <!--slideShow-->
 </div>
 
-<div class = "car-container col-lg-5">
-    <img src= "img/sedan_img.jpg" alt="Coupe">
-</div>
+
 
 
 
 <!--Scripts-->
 
-=======
-<div ng-repeat="type in cars.types">{{car.type}}</div>
->>>>>>> 56b344125b97d80c1e400fd4d444aa77ad6ae802

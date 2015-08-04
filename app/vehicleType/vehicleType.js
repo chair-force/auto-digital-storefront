@@ -4,7 +4,6 @@
 (function(){ 
 	var module = angular.module('myApp.vehicleType', [])
 
-<<<<<<< HEAD
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/vehicleType', {
 			templateUrl: 'vehicleType/vehicleType.html',
@@ -17,30 +16,68 @@
 
 	}]);
 
-	module.controller('sedanController',["$scope",function($scope){
+	module.controller('coupeController',["$scope",function($scope){
 		$scope.myInterval = 1000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
-		$scope.addSlide = function() {
-			var newWidth = 600 + slides.length + 1;
+		var images = ["coupe-a5.jpg", "coupe-r5.jpg", "coupe-r8.jpg", "coupe-rs-5.jpg"]
+		$scope.addSlide = function(i) {
 			slides.push({
-				image: '//placekitten.com/' + newWidth + '/300',
-				text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-				['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+				image: "resources/img/"+images[i],
 			});
 		};
 		for (var i=0; i<4; i++) {
-			$scope.addSlide();
+			$scope.addSlide(i);
 		}
 
 	}]);
 
+	module.controller('suvController',["$scope",function($scope){
+		$scope.myInterval = 1000;
+		$scope.noWrapSlides = false;
+		var slides = $scope.slides = [];
+		var images = ["suv-allroad.jpg", "suv-q5-hybrid.jpg", "suv-q5.jpg", "suv-q7.jpg", "suv-sq5.jpg"]
+		$scope.addSlide = function(i) {
+			//var newWidth = 600 + slides.length + 1;
+			slides.push({
+				image: "resources/img/"+images[i],
+			});
+		};
+		for (var i=0; i<4; i++) {
+			$scope.addSlide(i);
+		}
+
+	}]);
+	module.controller('sedanController',["$scope",function($scope){
+		$scope.myInterval = 1000;
+		$scope.noWrapSlides = false;
+		var slides = $scope.slides = [];
+		var images = ["sedan-a8.jpg", "sedan-a3.jpg", "sedan-a4.jpg", "sedan-a8-l-w12.jpg", "sedan-s8.jpg"]
+		$scope.addSlide = function(i) {
+			//var newWidth = 600 + slides.length + 1;
+			slides.push({
+				image: "resources/img/"+images[i],
+			});
+		};
+		for (var i=0; i<4; i++) {
+			$scope.addSlide(i);
+		}
+
+	}]);
+	module.controller('convertibleController',["$scope",function($scope){
+		$scope.myInterval = 1000;
+		$scope.noWrapSlides = false;
+		var slides = $scope.slides = [];
+		var images = ["convertible-a3-cabriolet.jpg", "convertible-a5-cabriolet.jpg", "convertible-r8-spyder.jpg", "convertible-rs-5-cabriolet.jpg", "convertible-s5-cabriolet.jpg"]
+		$scope.addSlide = function(i) {
+			//var newWidth = 600 + slides.length + 1;
+			slides.push({
+				image: "resources/img/"+images[i],
+			});
+		};
+		for (var i=0; i<4; i++) {
+			$scope.addSlide(i);
+		}
+
+	}]);
 }());
-=======
-.controller('VehicleTypeCtrl', ['$scope', 'carService', '$location', function($scope, carService, $location) {
-      $scope.cars = carService.getCars();
-      $scope.go = function ( path ) {
-        $location.path( path );
-      };
-}]);
->>>>>>> 56b344125b97d80c1e400fd4d444aa77ad6ae802
