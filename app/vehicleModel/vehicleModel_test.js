@@ -1,15 +1,15 @@
 'use strict';
 
-describe('myApp.view2 module', function() {
+describe('myApp.vehicleModel module', function() {
 
-  beforeEach(module('myApp.view2'));
+  beforeEach(module('myApp.vehicleModel'));
 
-  describe('view2 controller', function(){
+  describe('vehicleModel controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
-      var view2Ctrl = $controller('View2Ctrl');
-      expect(view2Ctrl).toBeDefined();
+      var vehicleModelCtrl = $controller('VehicleModelCtrl');
+      expect(vehicleModelCtrl).toBeDefined();
     }));
 
   });

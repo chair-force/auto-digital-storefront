@@ -1,16 +1,14 @@
 'use strict';
 
-describe('myApp.view2 module', function() {
+angular.module('myApp.vehicleModel', [])
 
-  beforeEach(module('myApp.view2'));
-
-  describe('view2 controller', function(){
-
-    it('should ....', inject(function($controller) {
-      //spec body
-      var view2Ctrl = $controller('View2Ctrl');
-      expect(view2Ctrl).toBeDefined();
-    }));
-
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/vehicleModel', {
+    templateUrl: 'vehicleModel/vehicleModel.html',
+    controller: 'VehicleModelCtrl'
   });
-});
+}])
+
+.controller('VehicleModelCtrl', [function() {
+
+}]);

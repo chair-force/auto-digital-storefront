@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.vehicleType', [])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/vehicleType', {
+    templateUrl: 'vehicleType/vehicleType.html',
+    controller: 'VehicleTypeCtrl'
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('VehicleTypeCtrl', [function() {
 
 }]);

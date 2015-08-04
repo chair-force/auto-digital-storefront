@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.welcome', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/vehicleModel.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/welcome', {
+    templateUrl: 'welcome/welcome.html',
+    controller: 'WelcomeCtrl'
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('WelcomeCtrl', [function() {
 
 }]);

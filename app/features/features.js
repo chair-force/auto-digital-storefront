@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.vehicleModel', ['ngRoute'])
+angular.module('myApp.features', [])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/vehicleModel', {
-    templateUrl: 'vehicleModel/vehicleModel.html',
-    controller: 'vehicleModelCtrl'
+  $routeProvider.when('/features', {
+    templateUrl: 'features/features.html',
+    controller: 'FeaturesCtrl'
   });
 }])
 
-.controller('vehicleModelCtrl', [function() {
+.controller('FeaturesCtrl', [function() {
 
 }]);
