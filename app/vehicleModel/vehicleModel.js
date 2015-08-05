@@ -1,5 +1,4 @@
 'use strict';
-
 angular.module('myApp.vehicleModel', [])
 
 .config(['$routeProvider', function($routeProvider) {
