@@ -3,7 +3,7 @@
 angular.module('myApp.services', [])
     .service('carService', function() {
         return {
-                car: '',
+                car: 'coupes',
             getCars: function() {
                 return {
                 "types": [
