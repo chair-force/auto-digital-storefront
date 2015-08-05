@@ -3,6 +3,7 @@
 angular.module('myApp.services', [])
     .service('carService', function() {
         return {
+            car: '',
             getCars: function() {
                 return {
                 "types": [
@@ -64,31 +65,31 @@ angular.module('myApp.services', [])
                                     "model": "All Road",
                                     "price": 29000,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "suv-allroad"
                                 },
                                 {
                                     "model": "Q5",
                                     "price": 39300,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "suv-q5"
                                 },
                                 {
                                     "model": "2015 Q5 Hybrid",
                                     "price": 51900,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "suv-q5-hybrid"
                                 },
                                 {
                                     "model": "SQ5",
                                     "price": 52700,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "suv-sq5"
                                 },
                                 {
                                     "model": "Q7",
                                     "price": 48300,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "suv-q7"
                                 }
                             ]
                         },
@@ -98,25 +99,25 @@ angular.module('myApp.services', [])
                                     "model": "A5",
                                     "price": 40000,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "coupe-a5"
                                 },
                                 {
                                     "model": "S5",
                                     "price": 52500,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "coupe-r5"
                                 },
                                 {
                                     "model": "RS 5",
                                     "price": 70900,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "coupe-rs-5"
                                 },
                                 {
                                     "model": "R8",
                                     "price": 115900,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "coupe-r8"
                                 }
                             ]
                         },
@@ -126,31 +127,31 @@ angular.module('myApp.services', [])
                                     "model": "A3 Cabriolet",
                                     "price": 35600,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "convertible-a3-cabriolet"
                                 },
                                 {
                                     "model": "A5 Cabriolet",
                                     "price": 47600,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "convertible-a5-cabriolet"
                                 },
                                 {
                                     "model": "S5 Cabriolet",
                                     "price": 60900,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "convertible-s5-cabriolet"
                                 },
                                 {
                                     "model": "RS 5 Cabriolet",
                                     "price": 79750,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "convertible-rs-5-cabriolet"
                                 },
                                 {
                                     "model": "R8 Spyder",
                                     "price": 129400,
                                     "year": "2015",
-                                    "imageName": ""
+                                    "imageName": "convertible-r8-spyder"
                                 }
                             ]
                         }
