@@ -23,7 +23,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 1000;
+		$scope.myInterval = 3000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["coupe-a5.jpg", "coupe-r5.jpg", "coupe-r8.jpg", "coupe-rs-5.jpg"]
@@ -89,7 +89,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 1000;
+		$scope.myInterval = 3000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["convertible-a3-cabriolet.jpg", "convertible-a5-cabriolet.jpg", "convertible-r8-spyder.jpg", "convertible-rs-5-cabriolet.jpg", "convertible-s5-cabriolet.jpg"]
