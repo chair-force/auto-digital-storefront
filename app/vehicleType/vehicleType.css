@@ -2,6 +2,11 @@
 	color: black;
 }
 
+.car-container{
+	height: 300px;
+	width: 400px;
+}
+
 .carousel-caption {
 	overflow: hidden;
 	padding-top: 30px;
