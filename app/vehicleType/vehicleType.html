@@ -1,26 +1,24 @@
 <link rel="stylesheet" href="vehicleType/vehicleType.css">
 
 <div class="page-header">
-    <h1>Header <small>Hello</small></h1>
+  <h1>Header <small>Hello</small></h1>
 </div>
 
 
 <div class = "car-container">
-<div class = "car-container col-lg-5 ">
-    <div ng-controller="coupeController">
-      <div style="height: 400px">
-        <carousel interval="myInterval" no-wrap="noWrapSlides">
-          <slide ng-repeat="slide in slides" active="slide.active">
-            <img ng-src="{{slide.image}}" ng-click="setCarType('coupes');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
+  <div ng-controller="coupeController">
+    <div style="height: 400px">
+      <carousel interval="myInterval" no-wrap="noWrapSlides">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}" ng-click="setCarType('coupes');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
         </slide>
-    </carousel>
-    <div class="typeLabel"><h3>Coupe</h3></div>
+      </carousel>
+      <div class="typeLabel"><h3>Coupe</h3></div>
 
-</div> <!--slideShow-->
-</div> <!--coupeContainer-->
-</div>
+    </div> <!--slideShow-->
+  </div> <!--coupeContainer-->
 
-<div class = "car-container">
+  <div class = "car-container">
     <div ng-controller="suvController">
       <div style="height: 400px">
         <carousel interval="myInterval" no-wrap="noWrapSlides">
@@ -28,17 +26,17 @@
             <img ng-src="{{slide.image}}" ng-click="setCarType('suvs');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
             <div class="carousel-caption">
               <h4></h4>
-          </div>
-      </slide>
-  </carousel>
-      <div class="typeLabel"><h3>SUV</h3></div>
+            </div>
+          </slide>
+        </carousel>
+        <div class="typeLabel"><h3>SUV</h3></div>
 
-</div>
-</div> <!--slideShow-->
-</div>
+      </div>
+    </div> <!--slideShow-->
+  </div>
 
 
-<div class = "car-container">
+  <div class = "car-container">
     <div ng-controller="sedanController">
       <div style="height: 400px">
         <carousel interval="myInterval" no-wrap="noWrapSlides">
@@ -46,17 +44,17 @@
             <img ng-src="{{slide.image}}" ng-click="setCarType('sedans');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
             <div class="carousel-caption">
               <h4></h4>
-          </div>
-      </slide>
-  </carousel>
-      <div class="typeLabel"><h3>Sedan</h3></div>
+            </div>
+          </slide>
+        </carousel>
+        <div class="typeLabel"><h3>Sedan</h3></div>
 
-</div>
-</div> <!--slideShow-->
-</div>
+      </div>
+    </div> <!--slideShow-->
+  </div>
 
 
-<div class = "car-container">
+  <div class = "car-container">
     <div ng-controller="convertibleController">
       <div style="height: 400px">
         <carousel interval="myInterval" no-wrap="noWrapSlides">
@@ -64,18 +62,18 @@
             <img ng-src="{{slide.image}}" ng-click="setCarType('convertibles');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
             <div class="carousel-caption">
               <h4></h4>
-          </div>
-      </slide>
-  </carousel>
-      <div class="typeLabel"><h3>Convertible</h3></div>
+            </div>
+          </slide>
+        </carousel>
+        <div class="typeLabel"><h3>Convertible</h3></div>
 
-</div>
-</div> <!--slideShow-->
-</div>
-
-
+      </div>
+    </div> <!--slideShow-->
+  </div>
 
 
 
-<!--Scripts-->
+
+
+  <!--Scripts-->
 
