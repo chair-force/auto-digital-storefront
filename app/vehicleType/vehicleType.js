@@ -2,7 +2,7 @@
 
 
 (function(){ 
-	var module = angular.module('myApp.vehicleType', [])
+	var module = angular.module('myApp.vehicleType',[])
 
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/vehicleType', {
@@ -43,7 +43,7 @@
 				image: "resources/img/"+images[i],
 			});
 		};
-		for (var i=0; i<4; i++) {
+		for (var i=0; i<5; i++) {
 			$scope.addSlide(i);
 		}
 
@@ -59,7 +59,7 @@
 				image: "resources/img/"+images[i],
 			});
 		};
-		for (var i=0; i<4; i++) {
+		for (var i=0; i<5; i++) {
 			$scope.addSlide(i);
 		}
 
