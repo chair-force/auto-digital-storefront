@@ -1,2 +1,11 @@
+<link rel="stylesheet" href="vehicleModel/vehicleModel.css">
 
-<div ng-repeat="car in getCarType()">{{car.model}}<img ng-src="resources/img/{{car.imageName}}.jpg"/></div>
+
+<div class = "typeLabel" ng-repeat="car in getCarType()">
+    <h3>{{car.model}} :
+        Year:  {{car.year}} Price: ${{car.price}}</h3>
+    <h2>
+    <img ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>
+    </h2>
+
+</div>
