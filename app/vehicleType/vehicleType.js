@@ -2,7 +2,7 @@
 
 
 (function(){ 
-	var module = angular.module('myApp.vehicleType',[])
+	var module = angular.module('myApp.vehicleType', [])
 
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/vehicleType', {
@@ -16,7 +16,13 @@
 
 	}]);
 
-	module.controller('coupeController',["$scope",function($scope){
+	module.controller('coupeController',["$scope", 'carService', '$location', function($scope, carService, $location){
+		$scope.go = function ( path ) {
+			$location.path( path );
+		};
+		$scope.setCarType = function (type) {
+			carService.car = type;
+		};
 		$scope.myInterval = 1000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
@@ -32,7 +38,13 @@
 
 	}]);
 
-	module.controller('suvController',["$scope",function($scope){
+	module.controller('suvController',["$scope", 'carService', '$location', function($scope, carService, $location){
+		$scope.go = function ( path ) {
+			$location.path( path );
+		};
+		$scope.setCarType = function (type) {
+			carService.car = type;
+		};
 		$scope.myInterval = 1000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
@@ -48,7 +60,13 @@
 		}
 
 	}]);
-	module.controller('sedanController',["$scope",function($scope){
+	module.controller('sedanController',["$scope", 'carService', '$location', function($scope, carService, $location){
+		$scope.go = function ( path ) {
+			$location.path( path );
+		};
+		$scope.setCarType = function (type) {
+			carService.car = type;
+		};
 		$scope.myInterval = 1000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
@@ -64,7 +82,13 @@
 		}
 
 	}]);
-	module.controller('convertibleController',["$scope",function($scope){
+	module.controller('convertibleController',["$scope", 'carService', '$location', function($scope, carService, $location){
+		$scope.go = function ( path ) {
+			$location.path( path );
+		};
+		$scope.setCarType = function (type) {
+			carService.car = type;
+		};
 		$scope.myInterval = 1000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
