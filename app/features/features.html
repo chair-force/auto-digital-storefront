@@ -3,11 +3,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-2">
-      <img src="resources/img/coupe-r8-features/engine/coupe-r8-engine-03.jpg" width="200" height="200">
+      <img ng-click="setImageOption('Engine')" src="resources/img/coupe-r8-features/engine/coupe-r8-engine-03.jpg" width="200" height="200">
       <p align="center">Engine</p>
-      <img src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-08.jpg" width="200" height="75">
+      <img ng-click="setImageOption('Exterior')" src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-08.jpg" width="200" height="75">
       <p align="center">Exterior</p>
-      <img src="resources/img/coupe-r8-features/interior/coupe-r8-interior-06.jpg" width="175" height="150" align="center">
+      <img ng-click="setImageOption('Interior')" src="resources/img/coupe-r8-features/interior/coupe-r8-interior-06.jpg" width="175" height="150" align="center">
       <p></p>
       <p align="center">Interior</p>
     </div>
@@ -23,20 +23,8 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-05.jpg" alt="Chania">
-          </div>
-
-          <div class="item">
-            <img src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-06.jpg" alt="Chania">
-          </div>
-
-          <div class="item">
-            <img src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-07.jpg" alt="Flower">
-          </div>
-
-          <div class="item">
-            <img src="resources/img/coupe-r8-features/exterior/coupe-r8-exterior-04.jpg" alt="Flower">
+          <div class="item" ng-class="{active:!$index}" ng-repeat="slide in getSlides()">
+            <img src={{slide}} alt="Chania">
           </div>
         </div>
 
