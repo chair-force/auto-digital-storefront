@@ -4,3 +4,15 @@
     position: fixed;
     width: 49%;
 }
+.hideMe{
+	visibility:hidden;
+}
+
+#numPad{
+	text-align:center;
+}
+
+#tableHolder{
+   margin: 0 auto;
+
+}

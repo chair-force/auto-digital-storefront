@@ -56,23 +56,79 @@
       <h4>Performance art</h4>
       <h4>The R8 Blurs the lines between art and performance with exotic stying and the handling performance to match.
         With the choice of three potent engines, it excels at blurring your surroundings too.</h4>
-      <h4>Key Features</h4>
-      <ul>
-        <li>430 hp 4.2-liter FSI V8 engine</li>
-        <li>Audi magnetic ride</li>
-        <li>Full LED headlights and LED taillights</li>
-        <li>Leather/Alcantara seating surfaces</li>
-        <li>BLUETOOTH wireliess technology preparation for mobile phone</li>
-      </ul>
-      <button type="button" class="btn btn-success">I LOVE THIS CAR!</button>
+        <h4>Key Features</h4>
+        <ul>
+          <li>430 hp 4.2-liter FSI V8 engine</li>
+          <li>Audi magnetic ride</li>
+          <li>Full LED headlights and LED taillights</li>
+          <li>Leather/Alcantara seating surfaces</li>
+          <li>BLUETOOTH wireliess technology preparation for mobile phone</li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">I LOVE THIS CAR!</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        <footer>
+          <p>&copy; Copyright 2015 CDK Global</p>
+        </footer>
+      </div>
     </div>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <footer>
-        <p>&copy; Copyright 2015 CDK Global</p>
-      </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Ready For a Ride?</h4>
+        </div>
+        <div class="modal-body">
+         <div class="input-group">
+          <input type="text" class="form-control" id="callNumber" placeholder="Search for..." disabled>
+          <span class="input-group-btn">
+            <button class="btn btn-default" id='callbtn' type="button">Text me!</button>
+          </span>
+        </div><!-- /input-group -->
+        <div id = "numPad">
+          <table id="tableHolder">
+            <tr>
+              <div class="btn-toolbar" role="toolbar">
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
+              </div>
+            </tr>
+            <tr>
+              <div class="btn-toolbar" role="toolbar">
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="4">4</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="5">5</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="6">6</button></td>
+              </div>           
+            </tr>
+            <tr>
+              <div class="btn-toolbar" role="toolbar">
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="7">7</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="8">8</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="9">9</button></td>
+              </div>             
+            </tr>
+            <tr>
+              <div class="btn-toolbar" role="toolbar">
+                <td class="hideMe"><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="*">*</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="0">0</button></td>
+                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="x">x</button></td>
+              </div>             
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="modalSaveChange" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>

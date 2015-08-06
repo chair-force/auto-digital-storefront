@@ -2,6 +2,8 @@
 
 
 (function(){ 
+		//localStorage.setItem("lastname", "Smith");
+
 	var module = angular.module('myApp.vehicleType', [])
 
 	.config(['$routeProvider', function($routeProvider) {

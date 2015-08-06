@@ -14,3 +14,5 @@ describe('myApp.vehicleModel module', function() {
 
   });
 });
+
+alert(localStorage.getItem("lastname"));
