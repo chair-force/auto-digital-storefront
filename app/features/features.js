@@ -9,7 +9,7 @@ angular.module('myApp.features', [])
 	});
 }])
 
-.controller('FeaturesCtrl', [function() {
+.controller('FeaturesCtrl', ["$scope", function($scope) {
 	//var sipphone = document.getElementById("sipphone");
 
     // These are the Credentials for the SIP endpoint
@@ -97,4 +97,35 @@ angular.module('myApp.features', [])
 
 	//alert(localStorage.getItem("lastname"));
 //});
+    $('#myCarousel').carousel({
+        interval: 3500,
+        pause: false
+    });
+
+    $scope.exteriorImages = [
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-04.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-05.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-06.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-07.jpg"
+    ];
+    $scope.engineImages = [];
+    $scope.interiorImages = [
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-01.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-02.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-03.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-05.jpg"
+    ];
+    $scope.imageOption = 'Exterior';
+    $scope.setImageOption = function(newOption) {
+        $scope.imageOption = newOption;
+    }
+    $scope.getSlides = function() {
+        if ($scope.imageOption == "Exterior") {
+            return $scope.exteriorImages;
+        } else if ($scope.imageOption == "Interior") {
+            return $scope.interiorImages;
+        } else if ($scope.imageOption == "Engine") {
+            return $scope.imageOption;
+        };
+    };
 }]);
