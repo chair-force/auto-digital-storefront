@@ -2,9 +2,11 @@
 
 
 <div class = "typeLabel" ng-repeat="car in getCarType()">
-    <h3>{{car.model}}: Year:  {{car.year}} Price: ${{car.price}}</h3>
+    <h3>{{car.year}} {{car.model}} </h3>
+    <h3> Price: ${{car.price}} </h3>
     <h2>
     	<img ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>
     </h2>
+
 
 </div>
