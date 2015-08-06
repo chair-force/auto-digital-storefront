@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="vehicleModel/vehicleModel.css">
 
-
-<div class = "typeLabel" ng-repeat="car in getCarType()">
-    <h3>{{car.model}} :
-        Year:  {{car.year}} Price: ${{car.price}}</h3>
-    <h2>
-    <img ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>
-    </h2>
-
+<div class="container">
+    <div class = "typeLabel" ng-repeat="car in getCarType()">
+        <img class="type-image" ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>
+        <div class="year-model-price">
+            <h1>{{car.year}} {{car.model}}</h1>
+            <h5><i>Starting at ${{car.price}}</i></h5>
+        </div>
+    </div>
 </div>
+<div class="dealer-branding">This should be a dealer branded image fixed to the right side of the screen, vertically stretching from top to bottom.</div>

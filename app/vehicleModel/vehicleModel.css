@@ -1,7 +1,10 @@
-.typeLabel h2{
-    text-align: center
+
+
+.year-model-price {
+    display: inline-block;
+
 }
-.typeLabel h3{
-    font-family: AudiNormal;
-    text-align: center
+
+.type-image {
+    width: 500px;
 }
