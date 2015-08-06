@@ -22,6 +22,7 @@ angular.module('myApp.features', [])
     var domain = global.applicationData.value("sip.domain", "default");
     var transport = global.applicationData.value("sip.transport", "default");
     var target = global.applicationData.value("sip.target", "default");
+    var textToken = "d4e2c269-fcf1-4b67-b87e-6b9a26d8ceda:294402803";
     //$("#headerDiv").append('<p><marquee direction="left">2015 Audi Q3 headed for Detroit before hitting US showrooms this fall </marquee></p>');
 
     function initSIP()
@@ -83,6 +84,29 @@ angular.module('myApp.features', [])
     $('#hangupBtn').click(function(){
     	//alert('hi');
     	sipphone.hangup();
+    });
+
+    $('#textbtn').on('click',function(){
+        var number = $('#textNumber').val();
+        //alert('1'+number);
+        var string = "http://www.audiusa.com/models/audi-r8"
+        if(number.length==10){
+            $.post("https://api.zipwhip.com/message/send",
+            {
+                body: "Thanks for checking Digital Interface Communication Kiosk (D.I.C.K.)!, checkout this link for more information on cars you liked "+ string +".",
+                contacts: '1'+number,
+                session: textToken
+            },
+            function(data, status){
+                if(data.success){
+                    alert('message sent');
+                }
+                else{
+                    alert('Help!!!!');
+                }
+            });
+        }
+
     });
     /*$('.btnClick').on('click',function(){
     	console.debug($(this).val());
