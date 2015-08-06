@@ -94,7 +94,7 @@
 		}
 
 		$('#myCarousel3').carousel({
-			interval: 1500,
+			interval: 5000,
 			pause: false
 		});
 
