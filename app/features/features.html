@@ -64,7 +64,7 @@
           <li>Leather/Alcantara seating surfaces</li>
           <li>BLUETOOTH wireliess technology preparation for mobile phone</li>
         </ul>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">I LOVE THIS CAR!</button>
+        <button type="button" class="btn btn-primary btn-lg" id="modalTrigger" data-toggle="modal" data-target="#myModal">I LOVE THIS CAR!</button>
       </div>
     </div>
     <hr>
@@ -87,48 +87,56 @@
         </div>
         <div class="modal-body">
          <div class="input-group">
-          <input type="text" class="form-control" id="callNumber" placeholder="Search for..." disabled>
+          <input type="text" class="form-control" id="callNumber" placeholder="Number!" disabled>
           <span class="input-group-btn">
-            <button class="btn btn-default" id='callbtn' type="button">Text me!</button>
+            <button class="btn btn-default" id='callbtn' type="button">Call me!</button>
           </span>
         </div><!-- /input-group -->
-        <div id = "numPad">
-          <table id="tableHolder">
-            <tr>
-              <div class="btn-toolbar" role="toolbar">
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
-              </div>
-            </tr>
-            <tr>
-              <div class="btn-toolbar" role="toolbar">
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="4">4</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="5">5</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="6">6</button></td>
-              </div>           
-            </tr>
-            <tr>
-              <div class="btn-toolbar" role="toolbar">
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="7">7</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="8">8</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="9">9</button></td>
-              </div>             
-            </tr>
-            <tr>
-              <div class="btn-toolbar" role="toolbar">
-                <td class="hideMe"><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="*">*</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="0">0</button></td>
-                <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="x">x</button></td>
-              </div>             
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" id="modalSaveChange" class="btn btn-primary">Save changes</button>
+        <div>
+          <object id="sipphone" type="application/x-qt-plugin" classid="sipphone" width="640" height="480">
+           <param name="url" value="http://"/>
+           <param name="width" value="640"/>
+           <param name="height" value="480"/>
+         </object>
+       </div>
+       <div id = "numPad">
+         <button class="btn btn-danger" id='hangupBtn' type="button">Hang up!</button>
+         <table class="centerOfDiv" id="phoneNumPad">
+          <tr>
+            <div class="btn-toolbar" role="toolbar">
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
+            </div>
+          </tr>
+          <tr>
+            <div class="btn-toolbar" role="toolbar">
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="4">4</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="5">5</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="6">6</button></td>
+            </div>           
+          </tr>
+          <tr>
+            <div class="btn-toolbar" role="toolbar">
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="7">7</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="8">8</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="9">9</button></td>
+            </div>             
+          </tr>
+          <tr>
+            <div class="btn-toolbar" role="toolbar">
+              <td class="hideMe"><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="*">*</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="0">0</button></td>
+              <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="x">x</button></td>
+            </div>             
+          </tr>
+        </table>
       </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" id="modalSaveChange" class="btn btn-primary">Save changes</button>
+    </div>
   </div>
+</div>
 </div>
