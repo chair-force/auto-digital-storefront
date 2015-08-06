@@ -104,7 +104,7 @@ angular.module('myApp.features', [])
     });
 
     $('#myCarousel').carousel({
-        interval: 3500,
+        interval: 5000,
         pause: false
     });
 
