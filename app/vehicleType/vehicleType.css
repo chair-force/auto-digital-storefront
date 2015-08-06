@@ -7,11 +7,19 @@
 	background-image: none
 }
 
-.car-container{
+.car-container-top{
 	display: inline-block;
 	padding-left: 50px;
 	padding-right: 50px;
-	height: 400px;
+	margin-top: -50px;
+	height: 250px;
+	width: 860px;
+}
+.car-container-bottom{
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 50px;
+	height: 250px;
 	width: 860px;
 }
 

@@ -1,16 +1,12 @@
 <link rel="stylesheet" href="vehicleType/vehicleType.css">
 
-<div class="page-header">
-  <h1>Header <small>Hello</small></h1>
-</div>
-
-<div class = "car-container">
+<div class = "car-container-top">
   <div ng-controller="coupeController">
     <div style="height: 500px">
       <div id="myCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides">
-            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('coupes');go('/vehicleModel')" width="468" height="627">
+            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('coupes');go('/vehicleModel')" width="468" height="500">
           </div>
         </div>
 
@@ -29,7 +25,7 @@
   </div>
 </div>
 
-<div class = "car-container">
+<div class = "car-container-top">
   <div ng-controller="suvController">
     <div style="height: 500px">
       <div id="myCarousel2" class="carousel slide" data-ride="carousel">
@@ -55,7 +51,7 @@
 </div>
 
 
-<div class = "car-container">
+<div class = "car-container-bottom">
   <div ng-controller="sedanController">
     <div style="height: 500px">
       <div id="myCarousel3" class="carousel slide" data-ride="carousel">
@@ -81,7 +77,7 @@
 </div>
 
 
-<div class = "car-container">
+<div class = "car-container-bottom  ">
   <div ng-controller="convertibleController">
     <div style="height: 500px">
       <div id="myCarousel4" class="carousel slide" data-ride="carousel">
