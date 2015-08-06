@@ -1,0 +1,18 @@
+.carousel {
+    margin-top: 60px;
+    margin-right: 50px;
+    position: fixed;
+    width: 49%;
+}
+.hideMe{
+	visibility:hidden;
+}
+
+#numPad{
+	text-align:center;
+}
+
+.centerOfDiv{
+   margin: 0 auto;
+
+}

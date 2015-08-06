@@ -2,6 +2,8 @@
 
 
 (function(){ 
+		//localStorage.setItem("lastname", "Smith");
+
 	var module = angular.module('myApp.vehicleType', [])
 
 	.config(['$routeProvider', function($routeProvider) {
@@ -36,6 +38,11 @@
 			$scope.addSlide(i);
 		}
 
+		$('#myCarousel1').carousel({
+			interval: 1500,
+			pause: false
+		});
+
 	}]);
 
 	module.controller('suvController',["$scope", 'carService', '$location', function($scope, carService, $location){
@@ -45,7 +52,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 1000;
+		$scope.myInterval = 3000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["suv-allroad.jpg", "suv-q5-hybrid.jpg", "suv-q5.jpg", "suv-q7.jpg", "suv-sq5.jpg"]
@@ -59,6 +66,11 @@
 			$scope.addSlide(i);
 		}
 
+		$('#myCarousel2').carousel({
+			interval: 1500,
+			pause: false
+		});
+
 	}]);
 	module.controller('sedanController',["$scope", 'carService', '$location', function($scope, carService, $location){
 		$scope.go = function ( path ) {
@@ -67,7 +79,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 1000;
+		$scope.myInterval = 3000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["sedan-a8.jpg", "sedan-a3.jpg", "sedan-a4.jpg", "sedan-a8-l-w12.jpg", "sedan-s8.jpg"]
@@ -80,6 +92,11 @@
 		for (var i=0; i<5; i++) {
 			$scope.addSlide(i);
 		}
+
+		$('#myCarousel3').carousel({
+			interval: 1500,
+			pause: false
+		});
 
 	}]);
 	module.controller('convertibleController',["$scope", 'carService', '$location', function($scope, carService, $location){
@@ -102,6 +119,11 @@
 		for (var i=0; i<4; i++) {
 			$scope.addSlide(i);
 		}
+
+		$('#myCarousel4').carousel({
+			interval: 1500,
+			pause: false
+		});
 
 	}]);
 }());

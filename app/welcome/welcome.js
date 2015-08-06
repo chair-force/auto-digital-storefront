@@ -11,6 +11,7 @@ angular.module('myApp.welcome', ['myApp.services'])
 
 .controller('WelcomeCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.go = function ( path ) {
+    	//localStorage.setItem("lastname", "Smith");
         $location.path( path );
     };
 }]);
