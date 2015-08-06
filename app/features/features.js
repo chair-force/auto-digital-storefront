@@ -108,7 +108,11 @@ angular.module('myApp.features', [])
         "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-06.jpg",
         "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-07.jpg"
     ];
-    $scope.engineImages = [];
+    $scope.engineImages = [
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-05.jpg",
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-06.jpg",
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-07.jpg"
+    ];
     $scope.interiorImages = [
         "resources/img/coupe-r8-features/interior/coupe-r8-interior-01.jpg",
         "resources/img/coupe-r8-features/interior/coupe-r8-interior-02.jpg",
@@ -125,7 +129,7 @@ angular.module('myApp.features', [])
         } else if ($scope.imageOption == "Interior") {
             return $scope.interiorImages;
         } else if ($scope.imageOption == "Engine") {
-            return $scope.imageOption;
+            return $scope.engineImages;
         };
     };
 }]);
