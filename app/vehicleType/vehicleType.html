@@ -7,19 +7,19 @@
 <div class = "car-container">
   <div ng-controller="coupeController">
     <div style="height: 500px">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides">
-            <img src={{slide.image}} style="margin:auto;" width="468" height="627">
+            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('coupes');go('/vehicleModel')" width="468" height="627">
           </div>
         </div>
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -32,11 +32,23 @@
 <div class = "car-container">
   <div ng-controller="suvController">
     <div style="height: 500px">
-      <carousel interval="myInterval" no-wrap="noWrapSlides">
-        <slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}" ng-click="setCarType('suvs');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
-        </slide>
-      </carousel>
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides">
+            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('suvs');go('/vehicleModel')" width="468" height="627">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <div class="typeLabel"><h3>SUV</h3></div>
     </div>
   </div> <!--slideShow-->
@@ -46,13 +58,23 @@
 <div class = "car-container">
   <div ng-controller="sedanController">
     <div style="height: 500px">
-      <carousel interval="myInterval" no-wrap="noWrapSlides">
-        <slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}" ng-click="setCarType('sedans');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
-          <div class="carousel-caption">
+      <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides">
+            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('sedans');go('/vehicleModel')" width="468" height="627">
           </div>
-        </slide>
-      </carousel>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <div class="typeLabel"><h3>Sedan</h3></div>
     </div>
   </div> <!--slideShow-->
@@ -62,11 +84,23 @@
 <div class = "car-container">
   <div ng-controller="convertibleController">
     <div style="height: 500px">
-      <carousel interval="myInterval" no-wrap="noWrapSlides">
-        <slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}" ng-click="setCarType('convertibles');go('/vehicleModel')" style="margin:auto;" width="468" height="627">
-        </slide>
-      </carousel>
+      <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides">
+            <img src={{slide.image}} style="margin:auto;" ng-click="setCarType('convertibles');go('/vehicleModel')" width="468" height="627">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel4" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel4" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <div class="typeLabel"><h3>Convertible</h3></div>
     </div>
   </div> <!--slideShow-->

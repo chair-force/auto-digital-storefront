@@ -38,6 +38,11 @@
 			$scope.addSlide(i);
 		}
 
+		$('#myCarousel1').carousel({
+			interval: 1500,
+			pause: false
+		});
+
 	}]);
 
 	module.controller('suvController',["$scope", 'carService', '$location', function($scope, carService, $location){
@@ -61,6 +66,11 @@
 			$scope.addSlide(i);
 		}
 
+		$('#myCarousel2').carousel({
+			interval: 1500,
+			pause: false
+		});
+
 	}]);
 	module.controller('sedanController',["$scope", 'carService', '$location', function($scope, carService, $location){
 		$scope.go = function ( path ) {
@@ -83,6 +93,11 @@
 			$scope.addSlide(i);
 		}
 
+		$('#myCarousel3').carousel({
+			interval: 1500,
+			pause: false
+		});
+
 	}]);
 	module.controller('convertibleController',["$scope", 'carService', '$location', function($scope, carService, $location){
 		$scope.go = function ( path ) {
@@ -104,6 +119,11 @@
 		for (var i=0; i<4; i++) {
 			$scope.addSlide(i);
 		}
+
+		$('#myCarousel4').carousel({
+			interval: 1500,
+			pause: false
+		});
 
 	}]);
 }());
