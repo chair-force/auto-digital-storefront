@@ -74,7 +74,7 @@
           <h4 class="modal-title" id="myModalLabel">Ready For a Ride?</h4>
         </div>
         <div class="modal-body">
-          <button  class="btn btn-danger fullModal"  id='callbtn' type="button"> HELP! I NEED SOMEBODY, HELP!!</button>
+          <button  class="btn btn-danger fullModal"  id='callbtn' type="button"> Speak to a Live Representative</button>
 
           <div class="input-group">
            <input type="tel" name="usrtel" class="form-control" id="textNumber" placeholder="Enter your phone number....">
@@ -84,14 +84,23 @@
         </div><!-- /input-group -->
 
         <div>
-        <object id="sipphone" type="application/x-qt-plugin" classid="sipphone" width="560" height="480">
+          <object id="sipphone" type="application/x-qt-plugin" classid="sipphone" width="560" height="480">
            <param name="url" value="http://"/>
            <param name="width" value="640"/>
            <param name="height" value="480"/>
          </object>
        </div>
-       <div id = "numPad">
+       <div >
          <button class="btn btn-danger" id='hangupBtn' type="button">Hang up!</button>
+         <div id = "numPad" >
+           
+          <div class="btn-toolbar" role="toolbar">
+            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
+            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
+            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
+          </div>
+        </div>
+
          <!--<button class="btn btn-danger" id='hangupBtn' type="button">Hang up!</button>
          <table class="centerOfDiv" id="phoneNumPad">
           <tr>

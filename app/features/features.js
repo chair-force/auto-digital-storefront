@@ -77,13 +77,16 @@ angular.module('myApp.features', [])
     $("#callbtn").on('click', function(){
     	console.log($('#callNumber').val());
     	initSIP();
-        //sipphone.call(target);
-        sipphone.call('2025');
+        sipphone.call(target);
+        //sipphone.call('2025');
     });
 
     $('#hangupBtn').click(function(){
     	//alert('hi');
     	sipphone.hangup();
+    });
+    $('#modalTrigger').on('click', function(){
+        $('#textNumber').val('');
     });
 
     $('#textbtn').on('click',function(){
@@ -93,7 +96,7 @@ angular.module('myApp.features', [])
         if(number.length==10){
             $.post("https://api.zipwhip.com/message/send",
             {
-                body: "Thanks for checking Digital Interface Communication Kiosk (D.I.C.K.)!, checkout this link for more information on cars you liked "+ string +".",
+                body: "Thanks for checking out our Virtual Storefront, check out this link for more information on cars you liked "+ string +".",
                 contacts: '1'+number,
                 session: textToken
             },
@@ -106,20 +109,22 @@ angular.module('myApp.features', [])
                 }
             });
         }
-
     });
-    /*$('.btnClick').on('click',function(){
+
+    $('#textNumber').on("keypress", function(e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            e.stopPropagation();
+            e.preventDefault();
+            $("#textbtn").click();
+        }
+    });
+
+    $('.btnClick').on('click',function(){
     	console.debug($(this).val());
-    	var oldVal = $('#callNumber').val();	
-    	var newVal;
-    	if($(this).val()=='x'){
-    		newVal = oldVal.substring(0, oldVal.length - 1);
-    	}
-    	else{
-    		newVal = oldVal+$(this).val();
-    	}
     	$('#callNumber').val(newVal);
-    });*/
+    });
+
     $('#modalTrigger').on('click', function(){
         $("#hangupBtn").hide();
         $('#sipphone').hide();
