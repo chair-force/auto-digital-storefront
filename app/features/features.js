@@ -26,7 +26,8 @@ angular.module('myApp.features', [])
 
     function initSIP()
     {
-        alert('init');
+        alert('Making Call');
+        $('#sipphone').show();
         sipphone.start(username, password, domain, transport);
         sipphone.placingCall.connect(onPlacingCall);
         sipphone.incomingCall.connect(onIncomingCall);
@@ -39,6 +40,7 @@ angular.module('myApp.features', [])
     }
     function onPlacingCall()
     {
+        $("#hangupBtn").show();
     }
     function onIncomingCall()
     {
@@ -50,13 +52,11 @@ angular.module('myApp.features', [])
 
     function onRegistered()
     {
-        sipphone.call($('#callNumber').val());
         $("#hangupBtn").show();
-        $('#numPad').hide();
     }
     function onEstablished()
     {
-        //On Established 
+        $("#hangupBtn").show();
     }
     function onRing()
     {
@@ -64,30 +64,27 @@ angular.module('myApp.features', [])
     }
     function onDisconnected()
     {
-        $("#player").css("display", "block");
-        $("#sipphone").css("display", "none");
-        player.resume();
-        $('#numPad').show();
-
-
+        //$("#player").css("display", "block");
+        $("#sipphone").hide();
+        $("#hangupBtn").hide();
     }
     function onError(code, explaination)
     {
+        alert(explaination);
     }
     
     $("#callbtn").on('click', function(){
     	console.log($('#callNumber').val());
-    	if($('#callNumber').val()){
-    		initSIP();
-    		player.pause();
-    	}
+    	initSIP();
+        //sipphone.call(target);
+        sipphone.call('2025');
     });
 
     $('#hangupBtn').click(function(){
-    	alert('hi');
+    	//alert('hi');
     	sipphone.hangup();
     });
-    $('.btnClick').on('click',function(){
+    /*$('.btnClick').on('click',function(){
     	console.debug($(this).val());
     	var oldVal = $('#callNumber').val();	
     	var newVal;
@@ -98,9 +95,11 @@ angular.module('myApp.features', [])
     		newVal = oldVal+$(this).val();
     	}
     	$('#callNumber').val(newVal);
-    });
+    });*/
     $('#modalTrigger').on('click', function(){
         $("#hangupBtn").hide();
+        $('#sipphone').hide();
+        $('#callNumber').val('');
     });
 
     $('#myCarousel').carousel({

@@ -16,3 +16,9 @@
    margin: 0 auto;
 
 }
+
+.fullModal{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 100%;
+}
