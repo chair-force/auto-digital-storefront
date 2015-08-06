@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="vehicleModel/vehicleModel.css">
 
-<div class="container">
-    <div class = "typeLabel" ng-repeat="car in getCarType()">
+<div class=row ng-repeat="car in getCarType() track by $index" ng-if="$index % 1 ==0">
+    <div class = "col-md-4" ng-repeat = "i in [$index, $index+1, $index+2, $index+3]">
         <img class="type-image" ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>
         <div class="year-model-price">
             <h1>{{car.year}} {{car.model}}</h1>
@@ -9,4 +9,6 @@
         </div>
     </div>
 </div>
+
+<!--http://stackoverflow.com/questions/20137496/angular-js-ng-repeat-for-creating-grid-->
 <div class="dealer-branding">This should be a dealer branded image fixed to the right side of the screen, vertically stretching from top to bottom.</div>
