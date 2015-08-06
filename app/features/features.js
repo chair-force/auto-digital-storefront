@@ -24,10 +24,20 @@ angular.module('myApp.features', [])
     var target = global.applicationData.value("sip.target", "default");
     var textToken = "d4e2c269-fcf1-4b67-b87e-6b9a26d8ceda:294402803";
     //$("#headerDiv").append('<p><marquee direction="left">2015 Audi Q3 headed for Detroit before hitting US showrooms this fall </marquee></p>');
-
+    
+    function sendDtmf(k){
+        var validValues = "0123456789*#";
+        if(validValues.indexOf(k)>=0){
+            //writeLog("sendDtmf('"+key+"')");
+            sipphone.sendDtmf(k);
+            //writeLog("ok");
+        } 
+        else {
+            //writeLog("Invalid DTMF argument.")
+        }
+    }
     function initSIP()
     {
-        alert('Making Call');
         $('#sipphone').show();
         sipphone.start(username, password, domain, transport);
         sipphone.placingCall.connect(onPlacingCall);
@@ -42,18 +52,20 @@ angular.module('myApp.features', [])
     function onPlacingCall()
     {
         $("#hangupBtn").show();
+        $("#dtmfController").show();
     }
     function onIncomingCall()
     {
     }
     function onReady()
     {
-        alert('ready');
+        //alert('ready');
     }
 
     function onRegistered()
     {
         $("#hangupBtn").show();
+        $("#dtmfController").show();
     }
     function onEstablished()
     {
@@ -68,12 +80,17 @@ angular.module('myApp.features', [])
         //$("#player").css("display", "block");
         $("#sipphone").hide();
         $("#hangupBtn").hide();
+        $("#dtmfController").hide();
     }
     function onError(code, explaination)
     {
         alert(explaination);
     }
-    
+    $(".btnClick").on('click', function(){
+        var value = $(this).val();
+        //alert(value);
+        sendDtmf(value);
+    })
     $("#callbtn").on('click', function(){
     	console.log($('#callNumber').val());
     	initSIP();
@@ -102,12 +119,15 @@ angular.module('myApp.features', [])
             },
             function(data, status){
                 if(data.success){
-                    alert('message sent');
+                    $('#textNumber').val('');
                 }
                 else{
                     alert('Help!!!!');
                 }
             });
+        }
+        else{
+            alert('Enter a valid phone number');
         }
     });
 
@@ -120,14 +140,12 @@ angular.module('myApp.features', [])
         }
     });
 
-    $('.btnClick').on('click',function(){
-    	console.debug($(this).val());
-    	$('#callNumber').val(newVal);
-    });
+   
 
     $('#modalTrigger').on('click', function(){
         $("#hangupBtn").hide();
         $('#sipphone').hide();
+        $("#dtmfController").hide();
         $('#callNumber').val('');
     });
 

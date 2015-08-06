@@ -8,7 +8,7 @@
 	visibility:hidden;
 }
 
-#numPad{
+#dtmfController{
 	text-align:center;
 }
 
@@ -21,4 +21,24 @@
 	margin-bottom: 10px;
 	margin-top: 10px;
 	width: 100%;
+}
+
+.btnClick{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #82C600;
+    border: 1px solid #ffffff;
+
+}
+
+#hangupBtn{
+	height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+}
+
+.hid{
+	visibility: hidden;
 }

@@ -91,15 +91,17 @@
          </object>
        </div>
        <div >
-         <button class="btn btn-danger" id='hangupBtn' type="button">Hang up!</button>
-         <div id = "numPad" >
-           
-          <div class="btn-toolbar" role="toolbar">
-            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
-            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
-            <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
-          </div>
-        </div>
+         <div id ="dtmfController" >
+           <div class="btn-toolbar centerOfDiv" role="toolbar">
+             <table class="centerOfDiv">
+               <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="1">1</button></td>
+               <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="2">2</button></td>
+               <td><button type="button" role="group" class="btn btn-primary btn-group btnClick" value="3">3</button></td>
+             </table>
+           </div>
+           <button class="btn btn-danger centerOfDiv" id='hangupBtn' type="button">Hang up!</button>
+
+         </div>
 
          <!--<button class="btn btn-danger" id='hangupBtn' type="button">Hang up!</button>
          <table class="centerOfDiv" id="phoneNumPad">
