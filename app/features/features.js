@@ -98,7 +98,7 @@ angular.module('myApp.features', [])
 	//alert(localStorage.getItem("lastname"));
 //});
     $('#myCarousel').carousel({
-        interval: 3500,
+        interval: 5000,
         pause: false
     });
 

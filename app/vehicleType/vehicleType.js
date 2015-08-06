@@ -25,7 +25,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 3000;
+		$scope.myInterval = 5000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["coupe-a5.jpg", "coupe-r5.jpg", "coupe-r8.jpg", "coupe-rs-5.jpg"]
@@ -39,7 +39,7 @@
 		}
 
 		$('#myCarousel1').carousel({
-			interval: 1500,
+			interval: 5000,
 			pause: false
 		});
 
@@ -52,7 +52,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 3000;
+		$scope.myInterval = 5000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["suv-allroad.jpg", "suv-q5-hybrid.jpg", "suv-q5.jpg", "suv-q7.jpg", "suv-sq5.jpg"]
@@ -67,7 +67,7 @@
 		}
 
 		$('#myCarousel2').carousel({
-			interval: 1500,
+			interval: 5000,
 			pause: false
 		});
 
@@ -79,7 +79,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 3000;
+		$scope.myInterval = 5000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["sedan-a8.jpg", "sedan-a3.jpg", "sedan-a4.jpg", "sedan-a8-l-w12.jpg", "sedan-s8.jpg"]
@@ -106,7 +106,7 @@
 		$scope.setCarType = function (type) {
 			carService.car = type;
 		};
-		$scope.myInterval = 3000;
+		$scope.myInterval = 5000;
 		$scope.noWrapSlides = false;
 		var slides = $scope.slides = [];
 		var images = ["convertible-a3-cabriolet.jpg", "convertible-a5-cabriolet.jpg", "convertible-r8-spyder.jpg", "convertible-rs-5-cabriolet.jpg", "convertible-s5-cabriolet.jpg"]
@@ -121,7 +121,7 @@
 		}
 
 		$('#myCarousel4').carousel({
-			interval: 1500,
+			interval: 5000,
 			pause: false
 		});
 
