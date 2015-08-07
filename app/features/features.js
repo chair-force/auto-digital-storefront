@@ -139,6 +139,14 @@ angular.module('myApp.features', [])
 
 
     });
+    $('#volumeUp').on('click',function(){
+        player.volume = player.volume+5;
+
+    });
+    
+    $('#volumeDown').on('click',function(){
+        player.volume = player.volume-5;
+    });
 
     $('#textNumber').on("keypress", function(e) {
         var code = (e.keyCode ? e.keyCode : e.which);
@@ -148,8 +156,7 @@ angular.module('myApp.features', [])
             $("#textbtn").click();
         }
     });
-
-
+    
 
     $('#modalTrigger').on('click', function(){
         $("#hangupBtn").hide();

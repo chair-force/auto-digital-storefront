@@ -53,7 +53,7 @@
           <li>BLUETOOTH wireliess technology preparation for mobile phone</li>
         </ul>
         <button type="button" class="btn btn-primary btn-lg" id="modalTrigger" data-toggle="modal" data-target="#myModal">I LOVE THIS CAR!</button>
-        <!--<button type="button" class="btn btn-danger btn-lg" id="playVideo" data-toggle="modal" data-target="#videoModal">Watch!</button>-->
+        <button type="button" class="btn btn-danger btn-lg" id="playVideo" data-toggle="modal" data-target="#videoModal">Watch!</button>
       </div>
     </div>
     <hr>
@@ -112,22 +112,26 @@
 </div>
 </div>
 <!--Youtube modal-->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade modal-wide blackout" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content blackout">
+      <div class="modal-header blackout">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Let's do it!</h4>
+        <h4 class="modal-title" id="myModalLabel"></h4>
       </div>
-      <div class="modal-body">
-       <video width="320" height="420">
-        <source src="resources/Audi_Speed_of_Light.mp4" type="video/mp4">
-          <source src="resources/Audi_Speed_of_Light.ogg" type="video/ogg">
-          </video>   
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+      <div class="modal-body blackout">
+        <object class="addCenter" id="player" type="application/x-qt-plugin" classid="videoplayer" width="1280" height="720" >
+          <param name="url" value="resources/Audi_Speed_of_Light.mp4"/>
+          <param name="volume" value="50"/> 
+          <param name="autoPlay" value="true"/>
+          <param name="loop" value="true"/> 
+        </object>  
+      </div>
+      <div class="modal-footer blackout">
+        <button type="button" class="btn btn-primary" id = "volumeDown">Volume Down</button>
+        <button type="button" class="btn btn-primary" id = "volumeUp">Volume Up</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>

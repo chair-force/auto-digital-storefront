@@ -35,7 +35,9 @@
     border: 1px solid #ffffff;
 
 }
-
+.addCenter{
+    margin-left: 250px;
+}
 #hangupBtn{
 	height: 100px;
     width: 100px;
@@ -45,4 +47,14 @@
 
 .hid{
 	visibility: hidden;
+}
+
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+.blackout{
+    background-color: black;
 }
