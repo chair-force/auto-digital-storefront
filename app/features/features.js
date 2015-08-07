@@ -23,18 +23,14 @@ angular.module('myApp.features', [])
     var transport = global.applicationData.value("sip.transport", "default");
     var target = global.applicationData.value("sip.target", "default");
     var textToken = "d4e2c269-fcf1-4b67-b87e-6b9a26d8ceda:294402803";
+    var dealerNumber = "5412308153"
     //$("#headerDiv").append('<p><marquee direction="left">2015 Audi Q3 headed for Detroit before hitting US showrooms this fall </marquee></p>');
-    
+
     function sendDtmf(k){
         var validValues = "0123456789*#";
         if(validValues.indexOf(k)>=0){
-            //writeLog("sendDtmf('"+key+"')");
             sipphone.sendDtmf(k);
-            //writeLog("ok");
         } 
-        else {
-            //writeLog("Invalid DTMF argument.")
-        }
     }
     function initSIP()
     {
@@ -107,8 +103,10 @@ angular.module('myApp.features', [])
     });
 
     $('#textbtn').on('click',function(){
+        var customerCar = "Audi R8";
         var number = $('#textNumber').val();
         //alert('1'+number);
+        //sendMail();
         var string = "http://www.audiusa.com/models/audi-r8"
         if(number.length==10){
             $.post("https://api.zipwhip.com/message/send",
@@ -125,10 +123,21 @@ angular.module('myApp.features', [])
                     alert('Help!!!!');
                 }
             });
+
+
+            $.post("https://api.zipwhip.com/message/send",
+            {
+                body: "Customer Number: "+number + "\n cars:" + customerCar,
+                contacts: '1'+dealerNumber,
+                session: textToken
+            },
+            function(data, status){
+            });
         }
         else{
-            alert('Enter a valid phone number');
         }
+
+
     });
 
     $('#textNumber').on("keypress", function(e) {
@@ -140,7 +149,7 @@ angular.module('myApp.features', [])
         }
     });
 
-   
+
 
     $('#modalTrigger').on('click', function(){
         $("#hangupBtn").hide();
@@ -155,21 +164,21 @@ angular.module('myApp.features', [])
     });
 
     $scope.exteriorImages = [
-    "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-04.jpg",
-    "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-05.jpg",
-    "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-06.jpg",
-    "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-07.jpg"
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-04.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-05.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-06.jpg",
+        "resources/img/coupe-r8-features/exterior/coupe-r8-exterior-07.jpg"
     ];
     $scope.engineImages = [
-    "resources/img/coupe-r8-features/engine/coupe-r8-engine-05.jpg",
-    "resources/img/coupe-r8-features/engine/coupe-r8-engine-06.jpg",
-    "resources/img/coupe-r8-features/engine/coupe-r8-engine-07.jpg"
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-05.jpg",
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-06.jpg",
+        "resources/img/coupe-r8-features/engine/coupe-r8-engine-07.jpg"
     ];
     $scope.interiorImages = [
-    "resources/img/coupe-r8-features/interior/coupe-r8-interior-01.jpg",
-    "resources/img/coupe-r8-features/interior/coupe-r8-interior-02.jpg",
-    "resources/img/coupe-r8-features/interior/coupe-r8-interior-03.jpg",
-    "resources/img/coupe-r8-features/interior/coupe-r8-interior-05.jpg"
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-01.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-02.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-03.jpg",
+        "resources/img/coupe-r8-features/interior/coupe-r8-interior-05.jpg"
     ];
     $scope.imageOption = 'Exterior';
     $scope.setImageOption = function(newOption) {
