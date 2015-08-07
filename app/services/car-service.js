@@ -74,12 +74,6 @@ angular.module('myApp.services', [])
                                     "imageName": "suv-q5"
                                 },
                                 {
-                                    "model": "2015 Q5 Hybrid",
-                                    "price": 51900,
-                                    "year": "2015",
-                                    "imageName": "suv-q5-hybrid"
-                                },
-                                {
                                     "model": "SQ5",
                                     "price": 52700,
                                     "year": "2015",
