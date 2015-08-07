@@ -90,6 +90,12 @@ angular.module('myApp.services', [])
                         {
                             "coupes": [
                                 {
+                                    "model": "R8",
+                                    "price": 115900,
+                                    "year": "2015",
+                                    "imageName": "coupe-r8"
+                                },
+                                {
                                     "model": "A5",
                                     "price": 40000,
                                     "year": "2015",
@@ -106,12 +112,6 @@ angular.module('myApp.services', [])
                                     "price": 70900,
                                     "year": "2015",
                                     "imageName": "coupe-rs-5"
-                                },
-                                {
-                                    "model": "R8",
-                                    "price": 115900,
-                                    "year": "2015",
-                                    "imageName": "coupe-r8"
                                 }
                             ]
                         },
