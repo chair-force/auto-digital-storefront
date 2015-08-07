@@ -53,7 +53,7 @@
           <li>BLUETOOTH wireliess technology preparation for mobile phone</li>
         </ul>
         <button type="button" class="btn btn-primary btn-lg" id="modalTrigger" data-toggle="modal" data-target="#myModal">I LOVE THIS CAR!</button>
-        <button type="button" class="btn btn-danger btn-lg" id="playVideo" data-toggle="modal" data-target="#videoModal">Watch!</button>
+        <!--<button type="button" class="btn btn-danger btn-lg" id="playVideo" data-toggle="modal" data-target="#videoModal">Watch!</button>-->
       </div>
     </div>
     <hr>
@@ -75,7 +75,7 @@
           <h4 class="modal-title" id="myModalLabel">Ready For a Ride?</h4>
         </div>
         <div class="modal-body">
-          <button  class="btn btn-danger fullModal"  id='callbtn' type="button"> Speak to a Live Representative</button>
+          <button  class="btn btn-warning fullModal"  id='callbtn' type="button"> Speak to a Live Representative</button>
 
           <div class="input-group">
            <input type="tel" name="usrtel" class="form-control" id="textNumber" placeholder="Enter your phone number....">
@@ -120,11 +120,14 @@
         <h4 class="modal-title" id="myModalLabel">Let's do it!</h4>
       </div>
       <div class="modal-body">
-        <iframe id="player" width="560" height="315" type="application/x-shockwave-flash" src="https://www.youtube.com/embed/FcCSN859xR8?autoplay=1&controls=0&loop=1" frameborder="0" allowfullscreen></iframe>​ 
-   </div>
-   <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <video width="320" height="420">
+        <source src="resources/Audi_Speed_of_Light.mp4" type="video/mp4">
+          <source src="resources/Audi_Speed_of_Light.ogg" type="video/ogg">
+          </video>   
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
