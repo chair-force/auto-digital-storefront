@@ -1,13 +1,6 @@
 <link rel="stylesheet" href="vehicleModel/vehicleModel.css">
 
 <div class="container">
-    <!--<div class = "typeLabel" ng-repeat="car in getCarType()">-->
-        <!--<img class="type-image" ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>-->
-        <!--<div class="year-model-price">-->
-            <!--<h1>{{car.year}} {{car.model}}</h1>-->
-            <!--<h5><i>Starting at ${{car.price}}</i></h5>-->
-        <!--</div>-->
-    <!--</div>-->
     <div class = typeLabel" ng-repeat="cars in getCarType()">
         <div ng-repeat="car in cars" class="col-sm-6">
             <img class="type-image" ng-src="resources/img/{{car.imageName}}.jpg"  ng-click="go('/features')" style="margin:auto;"/>

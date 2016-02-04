@@ -14,8 +14,6 @@ angular.module('myApp.vehicleModel', [])
       $location.path( path );
     };
 
-
-
     $scope.sedans = [[$scope.cars.types[0].sedans[0], $scope.cars.types[0].sedans[1]],[$scope.cars.types[0].sedans[2],$scope.cars.types[0].sedans[3]]];
     $scope.suvs = [[$scope.cars.types[1].suvs[0], $scope.cars.types[1].suvs[1]],[$scope.cars.types[1].suvs[2],$scope.cars.types[1].suvs[3]]];
     $scope.coupes = [[$scope.cars.types[2].coupes[0], $scope.cars.types[2].coupes[1]],[$scope.cars.types[2].coupes[2],$scope.cars.types[2].coupes[3]]];
